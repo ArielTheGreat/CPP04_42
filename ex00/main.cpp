@@ -18,6 +18,8 @@ int main()
     delete j;
     delete i;
 
+    std::cout << "************************************************" << std::endl;
+
     WrongAnimal*	base_w = new WrongAnimal();
 	WrongAnimal*	tiger_w = new WrongCat();
 	WrongCat*		tiger_origin = new WrongCat();
