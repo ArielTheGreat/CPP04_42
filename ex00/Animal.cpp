@@ -1,6 +1,6 @@
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() : type("Undefined")
 {
     std::cout << "Animal default constructor called" << std::endl;
 }
@@ -8,6 +8,7 @@ Animal::Animal()
 Animal::Animal(const Animal &obj)
 {
     std::cout << "Animal copy constructor called" << std::endl;
+    this->type=obj.type;
 }
 
 Animal &Animal::operator=(const Animal &obj)
