@@ -1,35 +1,26 @@
-#include "Animal.hpp"
-#include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-int main()
+int	main(void)
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete j;
-    delete i;
+	Animal*	dog1 = new Dog();
+	Animal* dog2 = new Dog();
+	Animal* cat1 = new Cat();
+	Animal* cat2 = new Cat();
+	Animal* animalArr[] = {dog1, dog2, cat1, cat2};
 
-    std::cout << "************************************************" << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		std::cout << "The animal type: " << animalArr[i]->getType()
+				<< " makes the sound -> ";
+		animalArr[i]->makeSound();
+	}
 
-    WrongAnimal*	base_w = new WrongAnimal();
-	WrongAnimal*	tiger_w = new WrongCat();
-	WrongCat*		tiger_origin = new WrongCat();
+	Dog test;
+	test.makeSound();
 
-	base_w->makeSound();
-	tiger_w->makeSound();
-	tiger_origin->makeSound();
-
-	delete base_w;
-	delete tiger_w;
-	delete tiger_origin;
-    return 0;
+	for (int i = 0; i < 4; i++) {
+		delete animalArr[i];
+	}
+	return (0);
 }
