@@ -31,5 +31,6 @@ int main()
 	delete base_w;
 	delete tiger_w;
 	delete tiger_origin;
+    // system("leaks Interfaces");
     return 0;
 }
