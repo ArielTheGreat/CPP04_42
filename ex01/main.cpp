@@ -16,8 +16,11 @@ int	main(void)
 		animalArr[i]->makeSound();
 	}
 
-	Dog test;
-	test.makeSound();
+	Dog *test = new Dog();
+	
+	Dog dogo(*test);
+	delete test;
+	dogo.makeSound();
 
 	for (int i = 0; i < 4; i++) {
 		delete animalArr[i];
