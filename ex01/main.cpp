@@ -17,10 +17,11 @@ int	main(void)
 	}
 
 	Dog *test = new Dog();
-	
+	test->setBrainIdea(1, "Duro");
 	Dog dogo(*test);
 	delete test;
 	dogo.makeSound();
+	std::cout << dogo.getBrainIdea(1) << std::endl;
 
 	for (int i = 0; i < 4; i++) {
 		delete animalArr[i];
