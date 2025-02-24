@@ -5,7 +5,6 @@ int	main(void)
 {
 	Animal base;
 	std::cout << "Type of base class " << base.getType() << std::endl;
-	AAnimal haha;
 	AAnimal* dog1 = new Dog();
 	AAnimal* dog2 = new Dog();
 	AAnimal* cat1 = new Cat();
