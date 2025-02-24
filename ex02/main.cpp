@@ -28,5 +28,6 @@ int	main(void)
 	for (int i = 0; i < 4; i++) {
 		delete animalArr[i];
 	}
+	// system("leaks Interfaces");
 	return (0);
 }
