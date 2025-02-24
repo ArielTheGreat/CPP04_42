@@ -3,11 +3,14 @@
 
 int	main(void)
 {
-	Animal*	dog1 = new Dog();
-	Animal* dog2 = new Dog();
-	Animal* cat1 = new Cat();
-	Animal* cat2 = new Cat();
-	Animal* animalArr[] = {dog1, dog2, cat1, cat2};
+	Animal base;
+	std::cout << "Type of base class " << base.getType() << std::endl;
+	AAnimal haha;
+	AAnimal* dog1 = new Dog();
+	AAnimal* dog2 = new Dog();
+	AAnimal* cat1 = new Cat();
+	AAnimal* cat2 = new Cat();
+	AAnimal* animalArr[] = {dog1, dog2, cat1, cat2};
 
 	for (int i = 0; i < 4; i++)
 	{
